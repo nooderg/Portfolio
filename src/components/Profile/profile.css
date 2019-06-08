@@ -1,0 +1,33 @@
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile .presentation {
+    font-weight: 300; 
+    width: 50%;
+}
+
+.profile .presentation h4 {
+    font-size: 24px;
+    
+}
+
+.profile .profile-picture {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    position: relative;
+}
+
+.profile .profile-picture img {
+    width:345px;
+    height: 345px;
+    filter: grayscale(100%);
+    transition: 0.2s ease-out all;
+}
+
+.profile .profile-picture img:hover {
+    width:345px;
+    filter: grayscale(0%);
+}
