@@ -1,7 +1,6 @@
 import React from 'react'
 import Moon from '../Moon/Moon'
 import './landing.css'
-import lune from '../../assets/images/lune.png'
 
 class Landing extends React.Component{
     render() {

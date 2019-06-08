@@ -1,3 +1,15 @@
 main .container {
+    position: relative;
     margin: 0 13%;
+    border-right: rgba(255,255,255,0.08) solid 1px;
+    border-left: rgba(255,255,255,0.08) solid 1px;
+}
+main .container::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: rgba(255,255,255,0.08);
+    top: 0;
+    left: 50%;
 }
