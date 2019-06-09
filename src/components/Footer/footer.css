@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    bottom: 1%;
+    left: 2%;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a::before {
+    background: white;
+}
+
+.footer a::before {
+    background: white;
+}

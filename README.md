@@ -13,7 +13,7 @@ npm start
 
 ## Cool features
 
-Super cool animations, Threejs moon (that would make Bruno Simon proud), made with React (and love).
+Super cool animations, Threejs moon (that would make Bruno Simon proud), made with React (and love), and routers.
 Why React ? Well, we wanted to train.
 
 ## Who participed ?
