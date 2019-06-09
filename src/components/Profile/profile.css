@@ -42,6 +42,10 @@
         width: 100%!important;
     }
 
+    .profile-picture {
+        width: 100%!important;
+    }
+
     .skill-icon .skill-img-container, .skill-icon .skill-img-container {
         position: relative;
         width: 22px!important;

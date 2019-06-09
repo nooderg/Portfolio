@@ -91,18 +91,22 @@
         width: 100%!important;
     }
 
+
+
+}
+
+@media screen and (max-width: 800px) {
     .project-number {
         top: -62%!important;
         left: -11%!important;
         font-size: 150px!important; 
     }
-
+    
+    .project-desc .project-txt {
+        display: none;
+    }
     .project-desc {
         top: 5%!important; 
         width: 100%!important;
-    }
-
-    .project-desc .project-txt {
-        display: none;
     }
 }
