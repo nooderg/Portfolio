@@ -10,7 +10,7 @@ const projects = [
     },
     {
         name : 'SpaceJS',
-        desc : 'Who never wanted to be an astraunot? Well, with SpaceJS, travel through asteroids and find your way to the end!',
+        desc : 'Who never wanted to be an astronaut? Well, with SpaceJS, travel through asteroids and find your way to the end!',
         img : './images/spacejs.png',
         link : '/spacejs',
         role : 'Front & Design',

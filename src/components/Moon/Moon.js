@@ -17,14 +17,14 @@ class Moon extends React.Component{
          * Sizes
          */
         const sizes = {}
-        sizes.width = window.innerWidth
-        sizes.height = window.innerHeight
+        sizes.width = window.innerWidth * 0.99
+        sizes.height = window.innerHeight * 0.99
 
         window.addEventListener('resize', () =>
         {
             // Update sizes
-            sizes.width = window.innerWidth 
-            sizes.height = window.innerHeight
+            sizes.width = window.innerWidth * 0.99
+            sizes.height = window.innerHeight * 0.99
         
             // Update camera
             camera.aspect = sizes.width / sizes.height
@@ -113,7 +113,7 @@ class Moon extends React.Component{
         })
 
         const renderer = new THREE.WebGLRenderer({antialias:true, alpha: true});
-        renderer.setSize(sizes.width-20, sizes.height-78)
+        renderer.setSize(sizes.width, sizes.height-78)
         renderer.shadowMap.enabled = true
         document.body.appendChild(renderer.domElement)
 
@@ -137,10 +137,7 @@ class Moon extends React.Component{
 
     render() {
         return (
-            <div>
-                
-            </div>
-        
+            <div></div>
         )
     }
 }

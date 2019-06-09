@@ -69,13 +69,6 @@
     margin-top: 20px;
     font-size: 14px;
 }
-/* 
-.project .project-desc a {
-    color: white;
-    padding: 5px 10px;
-    text-decoration: none;
-    border: 1px white solid;
-} */
 
 .project .project-number {
     position: absolute;
@@ -91,4 +84,25 @@
 .project:hover .project-number {
     transform: translateX(-45%);
 
+}
+
+@media screen and (max-width: 1100px) {
+    .project {
+        width: 100%!important;
+    }
+
+    .project-number {
+        top: -62%!important;
+        left: -11%!important;
+        font-size: 150px!important; 
+    }
+
+    .project-desc {
+        top: 5%!important; 
+        width: 100%!important;
+    }
+
+    .project-desc .project-txt {
+        display: none;
+    }
 }
