@@ -12,6 +12,6 @@
     background: white;
 }
 
-.footer a::before {
+.footer a::after {
     background: white;
 }
