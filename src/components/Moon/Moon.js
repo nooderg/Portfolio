@@ -84,7 +84,7 @@ class Moon extends React.Component{
         
         const sunLight = new THREE.DirectionalLight( 0xffffff, 1.2)
         sunLight.position.x = -1.094
-        sunLight.position.y = -0.2
+        sunLight.position.y = -0.5
         sunLight.position.z = 4.752
         sunLight.rotation.x = -0.722
         sunLight.rotation.y = 0.921

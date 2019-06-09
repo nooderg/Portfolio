@@ -1,0 +1,94 @@
+.project{
+    position: relative;
+    width: 800px;
+    margin: 30px auto; 
+}
+
+.project-info {
+    position: relative;
+    z-index: 200;
+}
+
+.project .project-info {
+    transition: 0.5s cubic-bezier(0.75, 0.00, 0.25, 1) all;  
+}
+
+.project:hover .project-info {
+    transform: translateX(19%);
+}
+
+
+
+.project img {
+    width: 100%;
+    transition: 0.2s ease-out all;
+}
+
+
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #000000 0%, rgba(0,0,0,0.2) 100%);
+    opacity: 0;
+    transition: 0.2s ease-out all;
+}
+
+.project:hover .cover {
+    opacity: 0.9;
+    transition: 0.2s 0.5s ease-out all;
+}
+
+.project .project-desc {
+    position: absolute;
+    width: 33%;
+    color: white;
+    top: 30%;
+    left: 3%;
+    opacity: 0;
+    transition: 0.2s ease-out all;
+}
+
+.project:hover .project-desc {
+    transform: translateX(2%);
+    opacity: 1;
+    transition: 0.2s 0.5s ease-out all;
+}
+
+.project .project-desc h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.project .project-desc small {
+    color: #E73E3E;
+    font-size: 12px;
+}
+
+.project .project-desc p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+/* 
+.project .project-desc a {
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px white solid;
+} */
+
+.project .project-number {
+    position: absolute;
+    font-size: 300px;
+    z-index: 0;
+    font-weight: 700;
+    opacity: 0.1;
+    left: 0px;
+    top: 8%;
+    transition: 0.5s cubic-bezier(0.75, 0.00, 0.25, 1) all;
+}
+
+.project:hover .project-number {
+    transform: translateX(-45%);
+
+}

@@ -8,6 +8,10 @@
     width: 50%;
 }
 
+.profile .presentation p {
+    width: 90%;
+}
+
 .profile .profile-picture {
     display: flex;
     justify-content: center;

@@ -3,7 +3,7 @@ import './main.css'
 import Landing from '../Landing/Landing'
 import Profile from '../Profile/Profile'
 import Skills from '../Skills/Skills'
-import Projects from '../Projects/Projects'
+import ProjectList from '../ProjectList/ProjectList'
 
 class Main extends React.Component{
     render() {
@@ -13,7 +13,7 @@ class Main extends React.Component{
                     <Landing/>
                     <Profile/>
                     <Skills/>
-                    <Projects/>
+                    <ProjectList/>
                 </div>
             </main>
         )
