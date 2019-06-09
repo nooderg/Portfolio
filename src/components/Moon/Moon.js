@@ -84,7 +84,7 @@ class Moon extends React.Component{
         
         const sunLight = new THREE.DirectionalLight( 0xffffff, 1.2)
         sunLight.position.x = -1.094
-        sunLight.position.y = -0.5
+        sunLight.position.y = -0.8
         sunLight.position.z = 4.752
         sunLight.rotation.x = -0.722
         sunLight.rotation.y = 0.921
@@ -101,198 +101,34 @@ class Moon extends React.Component{
         /**
          * Renderer
          */
+
+        let click = 0
+
+        window.addEventListener('mousedown', e =>
+        {
+                click = 1
+                window.addEventListener('mouseup', e => {
+                    click = 0
+                })
+        })
+
         const renderer = new THREE.WebGLRenderer({antialias:true, alpha: true});
         renderer.setSize(sizes.width-20, sizes.height-78)
         renderer.shadowMap.enabled = true
         document.body.appendChild(renderer.domElement)
 
-        let movez = 0
-
-        window.addEventListener('keydown', (event) =>
-        {
-            if(event.key === 'z')
-            {
-                movez = 1
-                window.addEventListener('keyup', (event) => {
-                    if(event.key === 'z')
-                    {
-                        movez = 0
-                    }
-                })
-            
-            } 
-        })
-        let moveq = 0
-    
-        window.addEventListener('keydown', (event) =>
-        {
-            if(event.key === 'q')
-            {
-                moveq = 1
-                window.addEventListener('keyup', (event) => {
-                    if(event.key === 'q')
-                    {
-                        moveq = 0
-                    }
-                })
-            
-            } 
-        })
-        let moves = 0
-    
-        window.addEventListener('keydown', (event) =>
-        {
-            if(event.key === 's')
-            {
-                moves = 1
-                window.addEventListener('keyup', (event) => {
-                    if(event.key === 's')
-                    {
-                        moves = 0
-                    }
-                })
-            
-            } 
-        })
-        let moved = 0
-    
-        window.addEventListener('keydown', (event) =>
-        {
-            if(event.key === 'd')
-            {
-                moved = 1
-                window.addEventListener('keyup', (event) => {
-                    if(event.key === 'd')
-                    {
-                        moved = 0
-                    }
-                })
-            
-            } 
-        })
         const loop = () =>
         {
             window.requestAnimationFrame(loop)
             sun.rotation.x += 0.0005
+            if (click === 1){sun.rotation.x += -cursor.y * 0.007}
+            if (click === 1){sun.rotation.y += cursor.x*0.03}
 
             if (sunLight.position.y < 0.6){sunLight.position.y += 0.01}
             if (sunLight.position.y > 0.6 && sunLight.position.y < 1.1){sunLight.position.y += 0.008}
             if (sunLight.position.y > 1.1 && sunLight.position.y < 1.6){sunLight.position.y += 0.005}
             if (sunLight.position.y > 1.6 && sunLight.position.y < 1.9){sunLight.position.y += 0.003}
             if (sunLight.position.y > 1.9 && sunLight.position.y < 2){sunLight.position.y += 0.001}
-        
-            if(movez === 1)
-            {
-                // if(camera.position.z < 0.85 && camera.position.z > -1.08 && camera.position.x < 0.278 && camera.position.x > -0.278)
-                // {
-                      camera.position.x  -= (Math.sin(camera.rotation.y)/100)
-                      camera.position.z -= (Math.cos(camera.rotation.y)/100)
-                      camera.position.y += (Math.tan(camera.rotation.x)/350)
-
-                      
-                // }
-                // else
-                // {
-                //     if (camera.position.z > 0.85)
-                //     {
-                //         camera.position.z = 0.8499999
-                //     }
-                //     if (camera.position.z < -1.08)
-                //     {
-                //         camera.position.z = -1.0799991
-                //     }
-                //     if (camera.position.x >= 0.278)
-                //     {
-                //         camera.position.x = 0.2779999
-                //     }
-                //     if (camera.position.x < -0.278)
-                //     {
-                //         camera.position.x = -0.27799999999999
-                //     }
-                // }
-            } 
-            if(moveq === 1)
-            {
-                // if(camera.position.z < 0.85 && camera.position.z > -1.08 && camera.position.x < 0.278 && camera.position.x > -0.278)
-                // {
-                      camera.position.x += (Math.sin(-camera.rotation.y - Math.PI/2)/100)
-                      camera.position.z += (-Math.cos(-camera.rotation.y - Math.PI/2)/100)
-                //     }
-                // else
-                // {
-                //     if (camera.position.z > 0.85)
-                //     {
-                //         camera.position.z = 0.8499999
-                //     }
-                //     if (camera.position.z < -1.08)
-                //     {
-                //         camera.position.z = -1.0799991
-                //     }
-                //     if (camera.position.x >= 0.278)
-                //     {
-                //         camera.position.x = 0.2779999
-                //     }
-                //     if (camera.position.x < -0.278)
-                //     {
-                //         camera.position.x = -0.27799999999999
-                //     }
-                // }
-            } 
-            if(moves === 1)
-            {
-                // if(camera.position.z < 0.85 && camera.position.z > -1.08 && camera.position.x < 0.278 && camera.position.x > -0.278)
-                // {
-                    camera.position.x  += (Math.sin(camera.rotation.y)/100)
-                    camera.position.z += (Math.cos(camera.rotation.y)/100)
-                camera.position.y -= (Math.tan(camera.rotation.x)/350)
-                // }
-                //  else
-                //  {
-                //      if (camera.position.z > 0.85)
-                //      {
-                //          camera.position.z = 0.8499999
-                //      }
-                //      if (camera.position.z < -1.08)
-                //      {
-                //          camera.position.z = -1.0799991
-                //      }
-                //      if (camera.position.x >= 0.278)
-                //      {
-                //          camera.position.x = 0.2779999
-                //      }
-                //      if (camera.position.x < -0.278)
-                //      {
-                //          camera.position.x = -0.27799999999999
-                //      }
-                //  }
-            } 
-            if(moved === 1)
-            {
-                // if(camera.position.z < 0.85 && camera.position.z > -1.08 && camera.position.x < 0.278 && camera.position.x > -0.278)
-                // {
-                    camera.position.x += (Math.sin(-camera.rotation.y + Math.PI/2)/100)
-                    camera.position.z += (-Math.cos(-camera.rotation.y + Math.PI/2)/100)
-                // }
-                // else
-                // {
-                //     if (camera.position.z > 0.85)
-                //     {
-                //         camera.position.z = 0.8499999
-                //     }
-                //     if (camera.position.z < -1.08)
-                //     {
-                //         camera.position.z = -1.0799991
-                //     }
-                //     if (camera.position.x >= 0.278)
-                //     {
-                //         camera.position.x = 0.2779999
-                //     }
-                //     if (camera.position.x < -0.278)
-                //     {
-                //         camera.position.x = -0.27799999999999
-                //     }
-                // }
-            } 
             // Renderer
             renderer.render(scene, camera)
         }

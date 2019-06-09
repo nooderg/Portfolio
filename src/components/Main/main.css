@@ -3,6 +3,7 @@ main .container {
     margin: 0 13%;
     border-right: rgba(255,255,255,0.1) solid 1px;
     border-left: rgba(255,255,255,0.1) solid 1px;
+    padding-bottom: 50px;
 }
 
 main .container::after {

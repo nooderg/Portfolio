@@ -8,7 +8,7 @@ const frontSkills = [
         icon: './icons/css.png'
     },
     {
-        name: 'Javascrip',
+        name: 'Javascript',
         icon: './icons/ES6-JS.png'
     },
     {
