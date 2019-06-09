@@ -1,0 +1,36 @@
+.skill-icon p {
+    opacity: 0;
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    transition: 0.2s ease-out all;
+}
+
+.skill-icon .skill-img-container, .skill-icon .skill-img-container {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    padding: 0px 20px;
+}
+
+.skill-icon .skill-img-container img, .skill-icon .skill-img-container img {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 50%;
+    filter: grayscale(70%);
+    transition: 0.1s ease-out all;
+
+}
+
+.skill-icon .skill-img-container:hover img,
+.skill-icon .skill-img-container:hover img {
+    filter: grayscale(0%);
+    transition: 0.1s ease-out all;
+}
+
+
+.skill-icon .skill-img-container:hover + p {
+    transform: translateY(-15%);
+    opacity: 0.5;
+}

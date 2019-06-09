@@ -1,0 +1,15 @@
+.skills h4 {
+    margin: 120px 0 50px 0;
+    text-align: center;
+}
+
+.frontSkills {
+    margin-bottom: 30px;
+}
+
+.frontSkills, .backSkills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
