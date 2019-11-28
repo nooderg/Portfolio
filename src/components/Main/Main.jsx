@@ -1,9 +1,9 @@
 import React from 'react'
-import Landing from '../Landing'
-import Profile from '../Profile'
-import ProjectList from '../ProjectList'
-import Skills from '../Skills'
+import Landing from './Landing'
 import './main.css'
+import Profile from './Profile'
+import ProjectList from './ProjectList'
+import Skills from './Skills'
 
 class Main extends React.Component {
     render() {

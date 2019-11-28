@@ -1,10 +1,10 @@
 import React from 'react'
 import * as THREE from 'three'
+import moonTextureSource from '../../../../assets/images/textures/Moon.jpg'
 import './moon.css'
-import moonTextureSource from '../../assets/images/textures/Moon.jpg'
 
 
-class Moon extends React.Component{
+class Moon extends React.Component {
 
     componentDidMount() {
         /**
@@ -20,16 +20,15 @@ class Moon extends React.Component{
         sizes.width = window.innerWidth * 0.99
         sizes.height = window.innerHeight * 0.99
 
-        window.addEventListener('resize', () =>
-        {
+        window.addEventListener('resize', () => {
             // Update sizes
             sizes.width = window.innerWidth * 0.99
             sizes.height = window.innerHeight * 0.99
-        
+
             // Update camera
             camera.aspect = sizes.width / sizes.height
             camera.updateProjectionMatrix()
-        
+
             // Update renderer
             renderer.setSize(sizes.width, sizes.height)
         })
@@ -41,8 +40,7 @@ class Moon extends React.Component{
         cursor.x = 0
         cursor.y = 0
 
-        window.addEventListener('mousemove', (_event) =>
-        {
+        window.addEventListener('mousemove', (_event) => {
             cursor.x = _event.clientX / sizes.width - 0.5
             cursor.y = _event.clientY / sizes.height - 0.5
         })
@@ -66,23 +64,23 @@ class Moon extends React.Component{
 
         const sun = new THREE.Mesh(
             new THREE.SphereBufferGeometry(1, 90, 90),
-            new THREE.MeshStandardMaterial({ side: THREE.DoubleSide, map: moonTexture,metalness: 1, roughness: 0.9 })
+            new THREE.MeshStandardMaterial({ side: THREE.DoubleSide, map: moonTexture, metalness: 1, roughness: 0.9 })
         )
         sun.position.z = 3
         sun.position.x = -1
         sun.receiveShadow = true
         sun.castShadow = true
         scene.add(sun)
-         
+
         /**
          * Lights
          */
-        
+
         const ambientLight = new THREE.AmbientLight(0xffffff, 0)
         scene.add(ambientLight)
-        
-        
-        const sunLight = new THREE.DirectionalLight( 0xffffff, 1.2)
+
+
+        const sunLight = new THREE.DirectionalLight(0xffffff, 1.2)
         sunLight.position.x = -1.094
         sunLight.position.y = -0.8
         sunLight.position.z = 4.752
@@ -95,40 +93,38 @@ class Moon extends React.Component{
         sunLight.shadow.camera.right = 1.2
         sunLight.shadow.camera.left = 1.2
         scene.add(sunLight)
-        
-        
-        
+
+
+
         /**
          * Renderer
          */
 
         let click = 0
 
-        window.addEventListener('mousedown', e =>
-        {
-                click = 1
-                window.addEventListener('mouseup', e => {
-                    click = 0
-                })
+        window.addEventListener('mousedown', e => {
+            click = 1
+            window.addEventListener('mouseup', e => {
+                click = 0
+            })
         })
 
-        const renderer = new THREE.WebGLRenderer({antialias:true, alpha: true});
-        renderer.setSize(sizes.width, sizes.height-78)
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(sizes.width, sizes.height - 78)
         renderer.shadowMap.enabled = true
         document.body.appendChild(renderer.domElement)
 
-        const loop = () =>
-        {
+        const loop = () => {
             window.requestAnimationFrame(loop)
             sun.rotation.x += 0.0005
-            if (click === 1){sun.rotation.x += -cursor.y * 0.007}
-            if (click === 1){sun.rotation.y += cursor.x*0.03}
+            if (click === 1) { sun.rotation.x += -cursor.y * 0.007 }
+            if (click === 1) { sun.rotation.y += cursor.x * 0.03 }
 
-            if (sunLight.position.y < 0.6){sunLight.position.y += 0.01}
-            if (sunLight.position.y > 0.6 && sunLight.position.y < 1.1){sunLight.position.y += 0.008}
-            if (sunLight.position.y > 1.1 && sunLight.position.y < 1.6){sunLight.position.y += 0.005}
-            if (sunLight.position.y > 1.6 && sunLight.position.y < 1.9){sunLight.position.y += 0.003}
-            if (sunLight.position.y > 1.9 && sunLight.position.y < 2){sunLight.position.y += 0.001}
+            if (sunLight.position.y < 0.6) { sunLight.position.y += 0.01 }
+            if (sunLight.position.y > 0.6 && sunLight.position.y < 1.1) { sunLight.position.y += 0.008 }
+            if (sunLight.position.y > 1.1 && sunLight.position.y < 1.6) { sunLight.position.y += 0.005 }
+            if (sunLight.position.y > 1.6 && sunLight.position.y < 1.9) { sunLight.position.y += 0.003 }
+            if (sunLight.position.y > 1.9 && sunLight.position.y < 2) { sunLight.position.y += 0.001 }
             // Renderer
             renderer.render(scene, camera)
         }

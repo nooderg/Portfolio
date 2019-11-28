@@ -1,5 +1,5 @@
 import React from 'react'
-import profile from '../../assets/images/profile.jpg'
+import profile from '../../../assets/images/profile.jpg'
 import './profile.css'
 
 class Profile extends React.Component {

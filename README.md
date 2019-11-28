@@ -26,6 +26,7 @@ Super cool animations, Threejs moon (that would make Bruno Simon proud), made wi
 Prio. | Feature
 ------------- | -------------
 🔥  | Switch to hooks
+🔥  | Improve performance in the Threejs
 🔥  | Get a real DB (Golang)
 👷‍♂️  | New design
 🗞️  | Add new projects
