@@ -1,6 +1,6 @@
 import React from 'react'
-import Moon from '../Moon/Moon'
 import './landing.css'
+import Moon from './Moon'
 
 class Landing extends React.Component {
     render() {

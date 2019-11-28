@@ -1,19 +1,19 @@
 import React from 'react'
+import Landing from '../Landing'
+import Profile from '../Profile'
+import ProjectList from '../ProjectList'
+import Skills from '../Skills'
 import './main.css'
-import Landing from '../Landing/Landing.jsx'
-import Profile from '../Profile/Profile'
-import Skills from '../Skills/Skills'
-import ProjectList from '../ProjectList/ProjectList'
 
-class Main extends React.Component{
+class Main extends React.Component {
     render() {
         return (
             <main>
                 <div className="container">
-                    <Landing/>
-                    <Profile/>
-                    <Skills/>
-                    <ProjectList/>
+                    <Landing />
+                    <Profile />
+                    <Skills />
+                    <ProjectList />
                 </div>
             </main>
         )
