@@ -1,10 +1,10 @@
 import React from 'react'
-import projects from '../../../assets/objects/projects'
 import Project from './Project'
 import './project-list.css'
 
 class Projects extends React.Component {
     render() {
+        let projects = require('../../../assets/objects/projects.json')
         return (
             <div className="project-list">
                 <h4>My projects</h4>
