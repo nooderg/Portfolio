@@ -16,6 +16,7 @@ class Projects extends React.Component {
                         link={project.link}
                         role={project.role}
                         number={project.number}
+                        tag={project.tag}
                         key={key} />
                 )}
             </div>

@@ -58,6 +58,7 @@
 .project .project-desc h3 {
     margin: 0;
     font-size: 24px;
+    width: 350px;
 }
 
 .project .project-desc small {
@@ -72,7 +73,7 @@
 
 .project .project-number {
     position: absolute;
-    font-size: 300px;
+    font-size: 260px;
     z-index: 0;
     font-weight: 700;
     opacity: 0.1;
