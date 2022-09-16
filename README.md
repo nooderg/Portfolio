@@ -1,5 +1,5 @@
 # Portfolio
-
+Very not up to date, but sick design 🔥
 This is my portfolio. And here's a guide on how to make it run on your machine
 
 ## Installation
